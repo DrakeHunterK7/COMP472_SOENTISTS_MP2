@@ -59,6 +59,9 @@ class AStar:
         if solutionFound:
             print("\n")
             self.print_solution()
+        else:
+            print("\n")
+            print("No solutions were found!")
 
 
 

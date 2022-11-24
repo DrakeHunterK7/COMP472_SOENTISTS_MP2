@@ -15,18 +15,5 @@ for line in file.readlines():
         boards.append(board)
 
 
-astar_solver = AStar(boards[1])
+astar_solver = AStar(boards[5])
 astar_solver.search_solution(1)
-
-# board = boards[0]
-# board.printBoardInfo()
-# print("\n")
-# board.moveCar(["M", 2, "down"])
-# board.printBoardInfo()
-# print("Has Won? ", board.isWinningState())
-# print("\n")
-#
-# board.moveCar(["A", 1, "right"])
-# board.printBoardInfo()
-# print("Has Won? ", board.isWinningState())
-# print("\n")
