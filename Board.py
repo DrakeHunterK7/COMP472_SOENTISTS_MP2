@@ -102,6 +102,24 @@ class Board:
 
         return len(characters_list)
 
+    def identify_blocking_positions(self):
+        ambulance = self.cars[0]
+        ambulance_last_cell = ambulance.cell_list[len(ambulance.cell_list)-1]
+
+        positions_list = 0
+
+        for x in range(ambulance_last_cell[1], self.board_dimension-1):
+            if self.board[ambulance_last_cell[0]][x] != ".":
+                positions_list += 1
+
+        return positions_list
+
+    def get_ambulance_column(self):
+        ambulance = self.cars[0]
+        ambulance_column = ambulance.cell_list[len(ambulance.cell_list)-1]
+
+        return ambulance_column[1]+1
+
 
     def getAllMoves(self):
         all_moves = []

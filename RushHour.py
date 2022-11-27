@@ -17,7 +17,7 @@ for line in file.readlines():
 
 
 for index, board in enumerate(boards):
-   for h in range(1):
+   for h in range(4):
 
     solution_file = open(output_directory+"a-h" + str(h+1) + "-sol-" + str(index+1), 'w')
     search_file = open(output_directory + "a-h" + str(h+1) + "-search-" + str(index+1), 'w')
