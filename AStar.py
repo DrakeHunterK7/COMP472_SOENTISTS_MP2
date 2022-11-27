@@ -22,7 +22,7 @@ class AStar:
 
         start_time = time.time()
 
-        start_node = Node(self.board, parent = None, cost = 0, move=None)
+        start_node = Node(self.board, parent=None, cost=[0, 0, 0], move=None)
         self.open_list.put([start_node.cost, start_node])
 
         while not self.open_list.empty() and not self.solutionFound:
@@ -70,8 +70,6 @@ class AStar:
             print("\n")
             print("No solutions were found!")
 
-
-
     def cost_function(self, board: bd, cost, heuristic_index):
         h = 0
         if heuristic_index == 1:
@@ -79,7 +77,8 @@ class AStar:
 
         g = cost + 1
         f = g + h
-        return f
+        cost_list = [f, g, h]
+        return cost_list
 
     def trace_path_to_root(self, start_node):
         current_node = start_node
@@ -107,6 +106,21 @@ class AStar:
 
         return line
 
+    def get_search_path(self):
+        line = ""
+        for node in self.searchPath:
+            line += str(node.cost)
+            line += " " + str(node.g)
+            line += " " + str(node.h)
+            line += " "*(10-len(str(node.cost) + " " + str(node.g) + " " + str(node.h)))
+
+            for row in node.board.board:
+                for cell in row:
+                    line += str(cell)
+            line+="\n"
+
+        return line
+
     def get_board_line(self):
         line = ""
         for node in reversed(self.solutionPath):
@@ -114,7 +128,9 @@ class AStar:
                 line += node.move[0]
                 line += " " + str(node.move[1])
                 line += " " + node.move[2]
-                line += "\t\t"
+                line += " "*(16-len(node.move[2]))
+
+                line += str(node.board.last_final_fuel) + " "
 
                 for row in node.board.board:
                     for cell in row:

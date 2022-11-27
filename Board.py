@@ -7,6 +7,7 @@ class Board:
         self.board = [[0 for x in range(self.board_dimension)] for y in range(self.board_dimension)]
         self.cars = []
         count = 0
+        self.last_final_fuel = 0
 
         # Replace all the 0s in this empty 6x6 board with the respective letters from the input file
         for i in range(6):
@@ -41,7 +42,7 @@ class Board:
                 loop_count = loop_count + 1
                 if loop_count > 36:
                     if i is alphabet:
-                        new_car.setFuel(string[loop_count])
+                        new_car.setFuel(int(string[loop_count]))
 
     def printBoardInfo(self):
         for i in self.board:
@@ -198,6 +199,9 @@ class Board:
 
                 for cell in car_to_move.cell_list:
                     self.board[cell[0]][cell[1]] = car_to_move.name
+
+        car_to_move.fuel -= distance
+        self.last_final_fuel = car_to_move.fuel
 
         self.isCarOnExit(car_to_move)
 

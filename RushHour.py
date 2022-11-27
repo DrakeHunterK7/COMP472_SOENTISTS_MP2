@@ -20,7 +20,7 @@ for index, board in enumerate(boards):
    for h in range(1):
 
     solution_file = open(output_directory+"a-h" + str(h+1) + "-sol-" + str(index+1), 'w')
-    search_file = open(output_directory + "a-h" + str(h+1) + "-sol-" + str(index+1), 'w')
+    search_file = open(output_directory + "a-h" + str(h+1) + "-search-" + str(index+1), 'w')
 
     astar_solver = AStar(board)
     astar_solver.search_solution(h + 1)
@@ -43,6 +43,9 @@ for index, board in enumerate(boards):
         solution_file.write(astar_solver.solutionPath[0].board.returnBoardInfo())
     else:
         solution_file.write("No solution found!")
+
+    search_file.write(astar_solver.get_search_path())
+    search_file.close()
 
 
     solution_file.close()
