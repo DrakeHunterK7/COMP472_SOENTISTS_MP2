@@ -1,0 +1,64 @@
+--------------------------------------------------------------------------------
+
+Initial Configuration: 
+
+B  B  .  G  .  H  
+E  .  .  G  .  H  
+E  A  A  G  .  I  
+.  .  F  C  C  I  
+D  D  F  .  .  I  
+.  .  F  .  .  .  
+
+
+Car Fuel Available: A:100 B:100 C:100 D:100 E:100 F:100 G:100 H:100 I:100 
+
+Runtime: 0.6999616622924805 seconds
+Search Path Length: 690 states
+Solution Path Length: 32 moves
+Solution Path: B 1 right; E 1 up; A 1 left; F 2 up; D 3 right; F 2 down; A 1 right; E 4 down; B 1 left; I 1 down; H 1 down; A 1 left; F 3 up; C 3 left; F 3 down; G 1 down; B 4 right; G 1 up; F 3 up; C 3 right; F 3 down; A 1 right; E 4 up; A 1 left; F 3 up; D 3 left; C 3 left; F 3 down; G 3 down; B 2 left; H 1 up; A 4 right; 
+
+
+B 1 right		.BBG.HE..G.HEAAG.I..FCCIDDF..I..F...
+E 1 up		EBBG.HE..G.H.AAG.I..FCCIDDF..I..F...
+A 1 left		EBBG.HE..G.HAA.G.I..FCCIDDF..I..F...
+F 2 up		EBBG.HE.FG.HAAFG.I..FCCIDD...I......
+D 3 right		EBBG.HE.FG.HAAFG.I..FCCI...DDI......
+F 2 down		EBBG.HE..G.HAA.G.I..FCCI..FDDI..F...
+A 1 right		EBBG.HE..G.H.AAG.I..FCCI..FDDI..F...
+E 4 down		.BBG.H...G.H.AAG.I..FCCIE.FDDIE.F...
+B 1 left		BB.G.H...G.H.AAG.I..FCCIE.FDDIE.F...
+I 1 down		BB.G.H...G.H.AAG....FCCIE.FDDIE.F..I
+H 1 down		BB.G.....G.H.AAG.H..FCCIE.FDDIE.F..I
+A 1 left		BB.G.....G.HAA.G.H..FCCIE.FDDIE.F..I
+F 3 up		BBFG....FG.HAAFG.H...CCIE..DDIE....I
+C 3 left		BBFG....FG.HAAFG.HCC...IE..DDIE....I
+F 3 down		BB.G.....G.HAA.G.HCCF..IE.FDDIE.F..I
+G 1 down		BB.......G.HAA.G.HCCFG.IE.FDDIE.F..I
+B 4 right		....BB...G.HAA.G.HCCFG.IE.FDDIE.F..I
+G 1 up		...GBB...G.HAA.G.HCCF..IE.FDDIE.F..I
+F 3 up		..FGBB..FG.HAAFG.HCC...IE..DDIE....I
+C 3 right		..FGBB..FG.HAAFG.H...CCIE..DDIE....I
+F 3 down		...GBB...G.HAA.G.H..FCCIE.FDDIE.F..I
+A 1 right		...GBB...G.H.AAG.H..FCCIE.FDDIE.F..I
+E 4 up		E..GBBE..G.H.AAG.H..FCCI..FDDI..F..I
+A 1 left		E..GBBE..G.HAA.G.H..FCCI..FDDI..F..I
+F 3 up		E.FGBBE.FG.HAAFG.H...CCI...DDI.....I
+D 3 left		E.FGBBE.FG.HAAFG.H...CCIDD...I.....I
+C 3 left		E.FGBBE.FG.HAAFG.HCC...IDD...I.....I
+F 3 down		E..GBBE..G.HAA.G.HCCF..IDDF..I..F..I
+G 3 down		E...BBE....HAA...HCCFG.IDDFG.I..FG.I
+B 2 left		E.BB..E....HAA...HCCFG.IDDFG.I..FG.I
+H 1 up		E.BB.HE....HAA....CCFG.IDDFG.I..FG.I
+A 4 right		E.BB.HE....H....AACCFG.IDDFG.I..FG.I
+
+
+Final Configuration: 
+
+E  .  B  B  .  H  
+E  .  .  .  .  H  
+.  .  .  .  A  A  
+C  C  F  G  .  I  
+D  D  F  G  .  I  
+.  .  F  G  .  I  
+
+

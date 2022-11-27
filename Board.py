@@ -49,6 +49,24 @@ class Board:
                 print(j, end='  ')
             print()
 
+    def returnBoardInfo(self):
+        str_board = ""
+        for i in self.board:
+            for j in i:
+                str_board += (str(j) + "  ")
+            str_board += "\n"
+
+        str_board += "\n\n"
+        return str_board
+
+    def printCarFuel(self):
+        str_car = "Car Fuel Available: "
+        for car in self.cars:
+            str_car += (car.name+":"+str(car.fuel)+" ")
+        str_car += "\n"
+
+        return str_car
+
     def isWinningState(self):
         if self.board[2][5] == "A":
             return True
@@ -91,7 +109,6 @@ class Board:
             if len(car_moves) > 0:
                 for move in car_moves:
                     all_moves.append(move)
-
         return all_moves
 
     def checkCarMoves(self, car_to_move):

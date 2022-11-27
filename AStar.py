@@ -2,26 +2,30 @@ import Board as bd
 from queue import PriorityQueue
 from Node import Node
 import pickle
+import time
 
 class AStar:
     def __init__(self, board):
         self.board = board
-
         self.open_list = PriorityQueue()
         self.closed_list = []
-
+        self.runtime = 0
         self.solutionPath = []
+        self.solutionMoves = []
+        self.searchPath = []
+        self.solutionFound = False
 
 
     def search_solution(self, heuristic: int):
 
         nodes_created = 0
-        solutionFound = False
 
-        start_node = Node(self.board, parent = None, cost = 0)
+        start_time = time.time()
+
+        start_node = Node(self.board, parent = None, cost = 0, move=None)
         self.open_list.put([start_node.cost, start_node])
 
-        while not self.open_list.empty() and not solutionFound:
+        while not self.open_list.empty() and not self.solutionFound:
 
             self.closed_list.append(self.open_list.queue[0][1])
             nodes_created = len(self.closed_list)
@@ -44,11 +48,14 @@ class AStar:
                             is_node_visited = True
 
                     if not is_node_visited:
-                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(newBoard, self.open_list.queue[0][0], heuristic))
+                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(newBoard, self.open_list.queue[0][0], heuristic), move)
                         self.open_list.put([newNode.cost, newNode])
             else:
-                solutionFound = True
+                self.solutionFound = True
                 self.trace_path_to_root(self.open_list.queue[0][1])
+                end_time = time.time()
+                self.runtime = end_time-start_time
+                self.searchPath = self.closed_list
 
             self.open_list.get()
 
@@ -56,7 +63,7 @@ class AStar:
                 print("", end="\r")
                 print("Finding Solution, nodes opened so far:", nodes_created, end="")
 
-        if solutionFound:
+        if self.solutionFound:
             print("\n")
             self.print_solution()
         else:
@@ -83,8 +90,36 @@ class AStar:
 
     def print_solution(self):
         cost = -1
-        for node in self.solutionPath:
+        for node in reversed(self.solutionPath):
             node.board.printBoardInfo()
             cost = cost + 1
             print("\n")
         print("Total Cost: ", cost)
+
+    def get_solution_moves(self):
+        line = ""
+        for node in reversed(self.solutionPath):
+            if node.move is not None:
+                line += node.move[0]
+                line += " " + str(node.move[1])
+                line += " " + node.move[2]
+                line += "; "
+
+        return line
+
+    def get_board_line(self):
+        line = ""
+        for node in reversed(self.solutionPath):
+            if node.move is not None:
+                line += node.move[0]
+                line += " " + str(node.move[1])
+                line += " " + node.move[2]
+                line += "\t\t"
+
+                for row in node.board.board:
+                    for cell in row:
+                        line+=str(cell)
+
+            line+="\n"
+
+        return line
