@@ -48,7 +48,7 @@ class AStar:
                             is_node_visited = True
 
                     if not is_node_visited:
-                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(newBoard, self.open_list.queue[0][0], heuristic), move)
+                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(moveBoard, self.open_list.queue[0][0], heuristic), move)
                         self.open_list.put([newNode.cost, newNode])
             else:
                 self.solutionFound = True
