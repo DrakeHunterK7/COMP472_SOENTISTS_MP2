@@ -59,7 +59,8 @@ class AStar:
 
             if not self.open_list.empty():
                 print("", end="\r")
-                print("Finding Solution, nodes opened so far:", nodes_created, end="")
+                print("Finding Solution, nodes opened so far:", len(self.open_list.queue),
+                      len(self.closed_list), end="")
 
         if self.solutionFound:
             print("\n")
@@ -80,7 +81,6 @@ class AStar:
         elif heuristic_index == 3:
             h = board.identify_blocking_cars() * 4
         elif heuristic_index == 4:
-            # h = board.board_dimension - board.get_ambulance_column()
             h = board.get_ambulance_column()
 
         g = cost + 1

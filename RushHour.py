@@ -4,11 +4,13 @@ from AStar import AStar
 from GBFS import GBFS
 from UCS import UCS
 import time
+import sys
+import collections
 
 directory = "SampleInputOutput/Sample/"
 output_directory = "Output/"
 
-file = open(directory + "sample-input.txt", 'r')
+file = open(directory + "puzzle-input.txt", 'r')
 
 boards = []
 
@@ -18,12 +20,9 @@ for line in file.readlines():
         board = bd.Board(line)
         boards.append(board)
 
-
 start_time = time.time()
 
 for index, board in enumerate(boards):
-    if(index != 4):
-        continue
     # solution_file = open(output_directory + "ucs" + "-sol-" + str(index + 1), 'w')
     # search_file = open(output_directory + "ucs" + "-search-" + str(index + 1), 'w')
     #
@@ -52,7 +51,7 @@ for index, board in enumerate(boards):
     # search_file.write(ucs_solver.get_search_path())
     # search_file.close()
 
-    for h in range(4):
+    for h in range(0,1):
         # solution_file = open(output_directory+"a-h" + str(h+1) + "-sol-" + str(index+1), 'w')
         # search_file = open(output_directory + "a-h" + str(h+1) + "-search-" + str(index+1), 'w')
         #
@@ -85,7 +84,7 @@ for index, board in enumerate(boards):
         search_file = open(output_directory + "gbfs-h" + str(h + 1) + "-search-" + str(index + 1), 'w')
 
         gbfs_solver = GBFS(board)
-        gbfs_solver.search_solution(h + 1)
+        gbfs_solver.search_solution(h+1)
 
         if gbfs_solver.solutionFound:
             solution_file.write("--------------------------------------------------------------------------------\n\n")

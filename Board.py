@@ -98,7 +98,7 @@ class Board:
         cars_done = []
 
         for x in range(ambulance_last_cell[1]+1, self.board_dimension):
-            if self.board[ambulance_last_cell[0]][x] != "." and self.board[ambulance_last_cell[0]][x] not in cars_done:
+            if self.board[ambulance_last_cell[0]][x] != "." and cars_done.count(self.board[ambulance_last_cell[0]][x]) == 0:
                 cars_count = cars_count + 1
                 cars_done.append(self.board[ambulance_last_cell[0]][x])
 
@@ -149,14 +149,8 @@ class Board:
 
         return cost
 
-
-
-    def compareBoard(self, board):
-        for i in range(6):
-            for j in range(6):
-                if self.board[i][j] != board.board[i][j]:
-                    return False
-        return True
+    def sublist_equal2(self, b):
+        return not set([tuple(l) for l in self.board]) ^ set([tuple(l) for l in b])
 
 
     def getAllMoves(self):

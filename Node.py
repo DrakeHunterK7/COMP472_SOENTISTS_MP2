@@ -14,3 +14,6 @@ class Node:
 
     def printBoard(self):
         self.board.printBoardInfo()
+
+    def printNode(self):
+        return str(self.cost) + " " + str(self.g) + " " + str(self.h) + "\n" + self.board.returnBoardInfo()
