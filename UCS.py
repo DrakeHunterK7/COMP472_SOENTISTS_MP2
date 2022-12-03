@@ -27,18 +27,11 @@ class UCS:
 
         while not self.open_list.empty() and not self.solutionFound:
 
-            check = None
-            for node in self.closed_list:
-                if node.board.board == check:
-                    print("Infinite Loop!!!!")
-                    infinite_loop = True
-                else:
-                    check = node.board.board
-
-            self.closed_list.append(self.open_list.queue[0][1])
+            top = self.open_list.get()
+            self.closed_list.append(top[1])
             nodes_created = len(self.closed_list)
 
-            newBoard = self.open_list.queue[0][1].board
+            newBoard = top[1].board
 
             if not newBoard.isWinningState():
                 for move in newBoard.getAllMoves():
@@ -58,20 +51,21 @@ class UCS:
                                 is_node_visited = True
 
                     if not is_node_visited:
-                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(moveBoard, self.open_list.queue[0][0]), move)
+                        newNode = Node(moveBoard, top[1], self.cost_function(top[0]), move)
                         self.open_list.put([newNode.cost, newNode])
             else:
                 self.solutionFound = True
-                self.trace_path_to_root(self.open_list.queue[0][1])
+                self.trace_path_to_root(top[1])
                 end_time = time.time()
-                self.runtime = end_time-start_time
+                self.runtime = end_time - start_time
                 self.searchPath = self.closed_list
 
-            self.open_list.get()
+
 
             if not self.open_list.empty():
                 print("", end="\r")
-                print("Finding Solution, nodes opened so far:", nodes_created, end="")
+                print("Finding Solution, nodes opened so far:", len(self.open_list.queue),
+                      len(self.closed_list), end="")
 
         if self.solutionFound:
             print("\n")
@@ -83,7 +77,8 @@ class UCS:
             self.runtime = end_time - start_time
             self.searchPath = self.closed_list
 
-    def cost_function(self, board: bd, cost):
+    def cost_function(self, cost):
+
         g = cost + 1
         f = g
         cost_list = [f, g, 0]

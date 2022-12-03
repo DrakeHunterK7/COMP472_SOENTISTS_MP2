@@ -1,1 +1,19 @@
-No solution found!
+--------------------------------------------------------------------------------
+
+Initial Configuration: 
+
+I  J  B  B  C  C  
+I  J  D  D  L  .  
+I  J  A  A  L  .  
+E  E  K  .  L  .  
+.  .  K  F  F  .  
+.  G  G  H  H  .  
+
+
+Car Fuel Available: A:100 B:100 C:100 D:100 E:100 F:0 G:6 H:100 I:100 J:100 K:100 L:100 
+
+Runtime: 0.2429666519165039 seconds
+Search Path Length: 353 states
+Solution Path Length: 0 moves
+Solution Path:  No solutions! 
+
