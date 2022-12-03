@@ -27,6 +27,14 @@ class UCS:
 
         while not self.open_list.empty() and not self.solutionFound:
 
+            check = None
+            for node in self.closed_list:
+                if node.board.board == check:
+                    print("Infinite Loop!!!!")
+                    infinite_loop = True
+                else:
+                    check = node.board.board
+
             self.closed_list.append(self.open_list.queue[0][1])
             nodes_created = len(self.closed_list)
 

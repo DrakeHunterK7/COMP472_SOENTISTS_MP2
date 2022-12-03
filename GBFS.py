@@ -14,6 +14,7 @@ class GBFS:
         self.solutionMoves = []
         self.searchPath = []
         self.solutionFound = False
+        self.callCount= 0
 
 
     def search_solution(self, heuristic: int):
@@ -27,25 +28,30 @@ class GBFS:
 
         infinite_loop = False
 
-        while not self.open_list.empty() and not self.solutionFound and not infinite_loop:
+        while not self.open_list.empty() and not self.solutionFound:
 
-            check = None
-            for node in self.closed_list:
-                if node.board.board == check:
-                    print("Infinite Loop!!!!")
-                    infinite_loop = True
-                else:
-                    check = node.board.board
-
-            self.closed_list.append(self.open_list.queue[0][1])
+            top = self.open_list.get()
+            self.closed_list.append(top[1])
             nodes_created = len(self.closed_list)
 
-            newBoard = self.open_list.queue[0][1].board
+            newBoard = top[1].board
 
             if not newBoard.isWinningState():
                 for move in newBoard.getAllMoves():
                     moveBoard = pickle.loads(pickle.dumps(newBoard, -1))
                     moveBoard.moveCar(move)
+
+                    if moveBoard.isWinningState():
+                        self.solutionFound = True
+                        newNode = Node(moveBoard, top[1],
+                                       self.cost_function(newBoard, moveBoard, heuristic), move)
+                        self.open_list.put([newNode.cost, newNode])
+                        top = self.open_list.get()
+                        self.trace_path_to_root(top[1])
+                        end_time = time.time()
+                        self.runtime = end_time - start_time
+                        self.searchPath = self.closed_list
+                        break
 
                     is_node_visited = False
 
@@ -58,19 +64,20 @@ class GBFS:
                         for node in self.open_list.queue:
                             if node[1].board.board == moveBoard.board:
                                 is_node_visited = True
+                                break
 
                     if not is_node_visited:
-                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(newBoard, moveBoard, heuristic), move)
+                        newNode = Node(moveBoard, top[1], self.cost_function(newBoard, moveBoard, heuristic), move)
                         self.open_list.put([newNode.cost, newNode])
 
-            else:
-                self.solutionFound = True
-                self.trace_path_to_root(self.open_list.queue[0][1])
-                end_time = time.time()
-                self.runtime = end_time-start_time
-                self.searchPath = self.closed_list
+            # else:
+            #     self.solutionFound = True
+            #     self.trace_path_to_root(top[1])
+            #     end_time = time.time()
+            #     self.runtime = end_time-start_time
+            #     self.searchPath = self.closed_list
 
-            self.open_list.get()
+
 
             if not self.open_list.empty():
                 print("", end="\r")
@@ -87,6 +94,7 @@ class GBFS:
             self.searchPath = self.closed_list
 
     def cost_function(self, board: bd, board_new: bd, heuristic_index):
+        self.callCount = self.callCount = 1
         h = 0
         h2 = 0
         if heuristic_index == 1:
@@ -102,8 +110,8 @@ class GBFS:
             h = board.get_ambulance_column()
             h2 = board_new.get_ambulance_column()
 
-        g = 0
-        f = h + h2
+        g = self.callCount
+        f = g+h2
         cost_list = [f, g, h]
         return cost_list
 

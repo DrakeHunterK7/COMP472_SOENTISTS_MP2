@@ -1,1 +1,44 @@
-No solution found!
+--------------------------------------------------------------------------------
+
+Initial Configuration: 
+
+.  .  I  .  .  .  
+B  B  I  .  K  .  
+G  H  A  A  K  L  
+G  H  D  D  K  L  
+G  .  .  J  E  E  
+F  F  .  J  .  .  
+
+
+Car Fuel Available: A:100 B:100 D:100 E:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 
+
+Runtime: 0.10700011253356934 seconds
+Search Path Length: 82 states
+Solution Path Length: 12 moves
+Solution Path: L 2 up; F 1 right; H 1 down; A 1 left; K 1 up; D 2 right; J 4 up; G 1 down; D 2 left; E 2 left; K 3 down; A 1 right; 
+
+
+L 2 up              98 ..I..LBBI.KLGHAAK.GHDDK.G..JEEFF.J..
+F 1 right           99 ..I..LBBI.KLGHAAK.GHDDK.G..JEE.FFJ..
+H 1 down            99 ..I..LBBI.KLG.AAK.GHDDK.GH.JEE.FFJ..
+A 1 left            99 ..I..LBBI.KLGAA.K.GHDDK.GH.JEE.FFJ..
+K 1 up              99 ..I.KLBBI.KLGAA.K.GHDD..GH.JEE.FFJ..
+D 2 right           98 ..I.KLBBI.KLGAA.K.GH..DDGH.JEE.FFJ..
+J 4 up              96 ..IJKLBBIJKLGAA.K.GH..DDGH..EE.FF...
+G 1 down            99 ..IJKLBBIJKL.AA.K.GH..DDGH..EEGFF...
+D 2 left            96 ..IJKLBBIJKL.AA.K.GHDD..GH..EEGFF...
+E 2 left            98 ..IJKLBBIJKL.AA.K.GHDD..GHEE..GFF...
+K 3 down            96 ..IJ.LBBIJ.L.AA...GHDDK.GHEEK.GFF.K.
+A 1 right           98 ..IJ.LBBIJ.L..AA..GHDDK.GHEEK.GFF.K.
+
+
+Final Configuration: 
+
+.  .  I  J  .  L  
+B  B  I  J  .  L  
+.  .  A  A  .  .  
+G  H  D  D  K  .  
+G  H  E  E  K  .  
+G  F  F  .  K  .  
+
+

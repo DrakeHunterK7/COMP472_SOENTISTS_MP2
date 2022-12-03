@@ -1,11 +1,14 @@
 import AStar
 import Board as bd
+import Node
 from AStar import AStar
 from GBFS import GBFS
 from UCS import UCS
 import time
 import sys
 import collections
+
+
 
 directory = "SampleInputOutput/Sample/"
 output_directory = "Output/"
@@ -51,7 +54,7 @@ for index, board in enumerate(boards):
     # search_file.write(ucs_solver.get_search_path())
     # search_file.close()
 
-    for h in range(0,1):
+    for h in range(4):
         # solution_file = open(output_directory+"a-h" + str(h+1) + "-sol-" + str(index+1), 'w')
         # search_file = open(output_directory + "a-h" + str(h+1) + "-search-" + str(index+1), 'w')
         #

@@ -12,38 +12,69 @@ F  F  K  L  .  N
 
 Car Fuel Available: A:100 B:100 C:100 D:100 F:100 G:100 H:100 J:100 K:100 L:100 M:100 N:100 
 
-Runtime: 52.92952871322632 seconds
-Search Path Length: 3755 states
-Solution Path Length: 17 moves
-Solution Path: L 1 up; N 1 down; H 2 right; K 1 down; F 4 right; J 3 down; B 1 left; A 1 left; D 1 left; K 4 up; G 2 left; L 2 down; A 3 right; K 1 down; C 1 left; M 1 up; A 1 right; 
+Runtime: 10.165589094161987 seconds
+Search Path Length: 1842 states
+Solution Path Length: 48 moves
+Solution Path: D 1 right; N 1 down; H 1 left; K 1 down; F 1 right; J 1 down; B 1 left; C 1 left; M 1 up; D 1 left; L 1 up; F 1 right; N 1 up; J 1 down; D 1 left; N 1 down; F 2 right; K 1 up; D 1 right; J 1 up; H 2 right; F 1 left; J 2 down; N 1 up; A 1 left; H 2 right; D 1 left; H 3 left; M 1 down; N 1 down; C 1 right; K 3 up; N 1 up; F 2 left; G 2 left; A 1 right; H 1 right; L 2 down; N 1 down; H 1 right; M 1 down; H 2 left; A 2 right; L 1 down; K 1 down; J 1 up; C 1 left; M 2 up; 
 
 
-L 1 up              99 JBBCCCJDDL.MJAAL.MFFK..N..KGGN.HH...
-N 1 down            99 JBBCCCJDDL.MJAAL.MFFK.....KGGN.HH..N
-H 2 right           98 JBBCCCJDDL.MJAAL.MFFK.....KGGN...HHN
-K 1 down            99 JBBCCCJDDL.MJAAL.MFF......KGGN..KHHN
-F 4 right           96 JBBCCCJDDL.MJAAL.M....FF..KGGN..KHHN
-J 3 down            97 .BBCCC.DDL.M.AAL.MJ...FFJ.KGGNJ.KHHN
-B 1 left            99 BB.CCC.DDL.M.AAL.MJ...FFJ.KGGNJ.KHHN
-A 1 left            99 BB.CCC.DDL.MAA.L.MJ...FFJ.KGGNJ.KHHN
-D 1 left            99 BB.CCCDD.L.MAA.L.MJ...FFJ.KGGNJ.KHHN
-K 4 up              95 BBKCCCDDKL.MAA.L.MJ...FFJ..GGNJ..HHN
-G 2 left            98 BBKCCCDDKL.MAA.L.MJ...FFJGG..NJ..HHN
-L 2 down            97 BBKCCCDDK..MAA...MJ..LFFJGGL.NJ..HHN
-A 3 right           96 BBKCCCDDK..M...AAMJ..LFFJGGL.NJ..HHN
-K 1 down            94 BB.CCCDDK..M..KAAMJ..LFFJGGL.NJ..HHN
-C 1 left            99 BBCCC.DDK..M..KAAMJ..LFFJGGL.NJ..HHN
-M 1 up              99 BBCCCMDDK..M..KAA.J..LFFJGGL.NJ..HHN
-A 1 right           95 BBCCCMDDK..M..K.AAJ..LFFJGGL.NJ..HHN
+D 1 right           99 JBBCCCJ.DD.MJAAL.MFFKL.N..KGGN.HH...
+N 1 down            99 JBBCCCJ.DD.MJAAL.MFFKL....KGGN.HH..N
+H 1 left            99 JBBCCCJ.DD.MJAAL.MFFKL....KGGNHH...N
+K 1 down            99 JBBCCCJ.DD.MJAAL.MFF.L....KGGNHHK..N
+F 1 right           99 JBBCCCJ.DD.MJAAL.M.FFL....KGGNHHK..N
+J 1 down            99 .BBCCCJ.DD.MJAAL.MJFFL....KGGNHHK..N
+B 1 left            99 BB.CCCJ.DD.MJAAL.MJFFL....KGGNHHK..N
+C 1 left            99 BBCCC.J.DD.MJAAL.MJFFL....KGGNHHK..N
+M 1 up              99 BBCCCMJ.DD.MJAAL..JFFL....KGGNHHK..N
+D 1 left            98 BBCCCMJDD..MJAAL..JFFL....KGGNHHK..N
+L 1 up              99 BBCCCMJDDL.MJAAL..JFF.....KGGNHHK..N
+F 1 right           98 BBCCCMJDDL.MJAAL..J.FF....KGGNHHK..N
+N 1 up              98 BBCCCMJDDL.MJAAL..J.FF.N..KGGNHHK...
+J 1 down            98 BBCCCM.DDL.MJAAL..J.FF.NJ.KGGNHHK...
+D 1 left            97 BBCCCMDD.L.MJAAL..J.FF.NJ.KGGNHHK...
+N 1 down            97 BBCCCMDD.L.MJAAL..J.FF..J.KGGNHHK..N
+F 2 right           96 BBCCCMDD.L.MJAAL..J...FFJ.KGGNHHK..N
+K 1 up              98 BBCCCMDD.L.MJAAL..J.K.FFJ.KGGNHH...N
+D 1 right           96 BBCCCM.DDL.MJAAL..J.K.FFJ.KGGNHH...N
+J 1 up              97 BBCCCMJDDL.MJAAL..J.K.FF..KGGNHH...N
+H 2 right           97 BBCCCMJDDL.MJAAL..J.K.FF..KGGN..HH.N
+F 1 left            95 BBCCCMJDDL.MJAAL..J.KFF...KGGN..HH.N
+J 2 down            95 BBCCCM.DDL.M.AAL..J.KFF.J.KGGNJ.HH.N
+N 1 up              96 BBCCCM.DDL.M.AAL..J.KFFNJ.KGGNJ.HH..
+A 1 left            99 BBCCCM.DDL.MAA.L..J.KFFNJ.KGGNJ.HH..
+H 2 right           95 BBCCCM.DDL.MAA.L..J.KFFNJ.KGGNJ...HH
+D 1 left            95 BBCCCMDD.L.MAA.L..J.KFFNJ.KGGNJ...HH
+H 3 left            92 BBCCCMDD.L.MAA.L..J.KFFNJ.KGGNJHH...
+M 1 down            98 BBCCC.DD.L.MAA.L.MJ.KFFNJ.KGGNJHH...
+N 1 down            95 BBCCC.DD.L.MAA.L.MJ.KFF.J.KGGNJHH..N
+C 1 right           98 BB.CCCDD.L.MAA.L.MJ.KFF.J.KGGNJHH..N
+K 3 up              95 BBKCCCDDKL.MAA.L.MJ..FF.J..GGNJHH..N
+N 1 up              94 BBKCCCDDKL.MAA.L.MJ..FFNJ..GGNJHH...
+F 2 left            93 BBKCCCDDKL.MAA.L.MJFF..NJ..GGNJHH...
+G 2 left            98 BBKCCCDDKL.MAA.L.MJFF..NJGG..NJHH...
+A 1 right           98 BBKCCCDDKL.M.AAL.MJFF..NJGG..NJHH...
+H 1 right           91 BBKCCCDDKL.M.AAL.MJFF..NJGG..NJ.HH..
+L 2 down            97 BBKCCCDDK..M.AA..MJFFL.NJGGL.NJ.HH..
+N 1 down            93 BBKCCCDDK..M.AA..MJFFL..JGGL.NJ.HH.N
+H 1 right           90 BBKCCCDDK..M.AA..MJFFL..JGGL.NJ..HHN
+M 1 down            97 BBKCCCDDK....AA..MJFFL.MJGGL.NJ..HHN
+H 2 left            88 BBKCCCDDK....AA..MJFFL.MJGGL.NJHH..N
+A 2 right           96 BBKCCCDDK......AAMJFFL.MJGGL.NJHH..N
+L 1 down            96 BBKCCCDDK......AAMJFF..MJGGL.NJHHL.N
+K 1 down            94 BB.CCCDDK.....KAAMJFF..MJGGL.NJHHL.N
+J 1 up              94 BB.CCCDDK...J.KAAMJFF..MJGGL.N.HHL.N
+C 1 left            97 BBCCC.DDK...J.KAAMJFF..MJGGL.N.HHL.N
+M 2 up              95 BBCCCMDDK..MJ.KAA.JFF...JGGL.N.HHL.N
 
 
 Final Configuration: 
 
 B  B  C  C  C  M  
 D  D  K  .  .  M  
-.  .  K  .  A  A  
-J  .  .  L  F  F  
+J  .  K  A  A  .  
+J  F  F  .  .  .  
 J  G  G  L  .  N  
-J  .  .  H  H  N  
+.  H  H  L  .  N  
 
 
