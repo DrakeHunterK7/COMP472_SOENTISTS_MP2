@@ -79,7 +79,8 @@ class AStar:
         elif heuristic_index == 3:
             h = board.identify_blocking_cars() * 4
         elif heuristic_index == 4:
-            h = board.board_dimension - board.get_ambulance_column()
+            # h = board.board_dimension - board.get_ambulance_column()
+            h = board.get_ambulance_column()
 
         g = cost + 1
         f = g + h
