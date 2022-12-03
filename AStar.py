@@ -27,6 +27,13 @@ class AStar:
 
         while not self.open_list.empty() and not self.solutionFound:
 
+            check = None
+            for node in self.closed_list:
+                if node.board.board == check:
+                    print("Infinite Loop!!!!")
+                else:
+                    check = node.board.board
+
             self.closed_list.append(self.open_list.queue[0][1])
             nodes_created = len(self.closed_list)
 
@@ -42,10 +49,12 @@ class AStar:
                     for node in self.closed_list:
                         if node.board.board == moveBoard.board:
                             is_node_visited = True
+                            break
 
-                    for node in self.open_list.queue:
-                        if node[1].board.board == moveBoard.board:
-                            is_node_visited = True
+                    if not is_node_visited:
+                        for node in self.open_list.queue:
+                            if node[1].board.board == moveBoard.board:
+                                is_node_visited = True
 
                     if not is_node_visited:
                         newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(moveBoard, self.open_list.queue[0][0], heuristic), move)
@@ -53,7 +62,9 @@ class AStar:
             else:
                 self.solutionFound = True
                 self.trace_path_to_root(self.open_list.queue[0][1])
-
+                end_time = time.time()
+                self.runtime = end_time - start_time
+                self.searchPath = self.closed_list
 
             self.open_list.get()
 

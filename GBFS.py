@@ -25,7 +25,17 @@ class GBFS:
         start_node = Node(self.board, parent=None, cost=[0, 0, 0], move=None)
         self.open_list.put([start_node.cost, start_node])
 
-        while not self.open_list.empty() and not self.solutionFound:
+        infinite_loop = False
+
+        while not self.open_list.empty() and not self.solutionFound and not infinite_loop:
+
+            check = None
+            for node in self.closed_list:
+                if node.board.board == check:
+                    print("Infinite Loop!!!!")
+                    infinite_loop = True
+                else:
+                    check = node.board.board
 
             self.closed_list.append(self.open_list.queue[0][1])
             nodes_created = len(self.closed_list)
@@ -42,14 +52,17 @@ class GBFS:
                     for node in self.closed_list:
                         if node.board.board == moveBoard.board:
                             is_node_visited = True
-
-                    for node in self.open_list.queue:
-                        if node[1].board.board == moveBoard.board:
-                            is_node_visited = True
+                            break
 
                     if not is_node_visited:
-                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(moveBoard, heuristic), move)
+                        for node in self.open_list.queue:
+                            if node[1].board.board == moveBoard.board:
+                                is_node_visited = True
+
+                    if not is_node_visited:
+                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(newBoard, moveBoard, heuristic), move)
                         self.open_list.put([newNode.cost, newNode])
+
             else:
                 self.solutionFound = True
                 self.trace_path_to_root(self.open_list.queue[0][1])
@@ -61,7 +74,7 @@ class GBFS:
 
             if not self.open_list.empty():
                 print("", end="\r")
-                print("Finding Solution, nodes opened so far:", nodes_created, end="")
+                print("Finding Solution, nodes opened so far:", len(self.open_list.queue), len(self.closed_list), end="")
 
         if self.solutionFound:
             print("\n")
@@ -73,19 +86,24 @@ class GBFS:
             self.runtime = end_time - start_time
             self.searchPath = self.closed_list
 
-    def cost_function(self, board: bd, heuristic_index):
+    def cost_function(self, board: bd, board_new: bd, heuristic_index):
         h = 0
+        h2 = 0
         if heuristic_index == 1:
             h = board.identify_blocking_cars()
+            h2 = board_new.identify_blocking_cars()
         elif heuristic_index == 2:
             h = board.identify_blocking_positions()
+            h2 = board_new.identify_blocking_positions()
         elif heuristic_index == 3:
             h = board.identify_blocking_cars() * 4
+            h2 = board_new.identify_blocking_cars() * 4
         elif heuristic_index == 4:
             h = board.get_ambulance_column()
+            h2 = board_new.get_ambulance_column()
 
         g = 0
-        f = h
+        f = h + h2
         cost_list = [f, g, h]
         return cost_list
 

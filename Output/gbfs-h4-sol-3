@@ -1,0 +1,49 @@
+--------------------------------------------------------------------------------
+
+Initial Configuration: 
+
+J  B  B  C  C  C  
+J  D  D  .  .  M  
+J  A  A  L  .  M  
+F  F  K  L  .  N  
+.  .  K  G  G  N  
+.  H  H  .  .  .  
+
+
+Car Fuel Available: A:100 B:100 C:100 D:100 F:100 G:100 H:100 J:100 K:100 L:100 M:100 N:100 
+
+Runtime: 52.92952871322632 seconds
+Search Path Length: 3755 states
+Solution Path Length: 17 moves
+Solution Path: L 1 up; N 1 down; H 2 right; K 1 down; F 4 right; J 3 down; B 1 left; A 1 left; D 1 left; K 4 up; G 2 left; L 2 down; A 3 right; K 1 down; C 1 left; M 1 up; A 1 right; 
+
+
+L 1 up              99 JBBCCCJDDL.MJAAL.MFFK..N..KGGN.HH...
+N 1 down            99 JBBCCCJDDL.MJAAL.MFFK.....KGGN.HH..N
+H 2 right           98 JBBCCCJDDL.MJAAL.MFFK.....KGGN...HHN
+K 1 down            99 JBBCCCJDDL.MJAAL.MFF......KGGN..KHHN
+F 4 right           96 JBBCCCJDDL.MJAAL.M....FF..KGGN..KHHN
+J 3 down            97 .BBCCC.DDL.M.AAL.MJ...FFJ.KGGNJ.KHHN
+B 1 left            99 BB.CCC.DDL.M.AAL.MJ...FFJ.KGGNJ.KHHN
+A 1 left            99 BB.CCC.DDL.MAA.L.MJ...FFJ.KGGNJ.KHHN
+D 1 left            99 BB.CCCDD.L.MAA.L.MJ...FFJ.KGGNJ.KHHN
+K 4 up              95 BBKCCCDDKL.MAA.L.MJ...FFJ..GGNJ..HHN
+G 2 left            98 BBKCCCDDKL.MAA.L.MJ...FFJGG..NJ..HHN
+L 2 down            97 BBKCCCDDK..MAA...MJ..LFFJGGL.NJ..HHN
+A 3 right           96 BBKCCCDDK..M...AAMJ..LFFJGGL.NJ..HHN
+K 1 down            94 BB.CCCDDK..M..KAAMJ..LFFJGGL.NJ..HHN
+C 1 left            99 BBCCC.DDK..M..KAAMJ..LFFJGGL.NJ..HHN
+M 1 up              99 BBCCCMDDK..M..KAA.J..LFFJGGL.NJ..HHN
+A 1 right           95 BBCCCMDDK..M..K.AAJ..LFFJGGL.NJ..HHN
+
+
+Final Configuration: 
+
+B  B  C  C  C  M  
+D  D  K  .  .  M  
+.  .  K  .  A  A  
+J  .  .  L  F  F  
+J  G  G  L  .  N  
+J  .  .  H  H  N  
+
+

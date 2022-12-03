@@ -10,7 +10,7 @@ import collections
 directory = "SampleInputOutput/Sample/"
 output_directory = "Output/"
 
-file = open(directory + "puzzle-input.txt", 'r')
+file = open(directory + "sample-input.txt", 'r')
 
 boards = []
 

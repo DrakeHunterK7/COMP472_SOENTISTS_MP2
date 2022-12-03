@@ -42,10 +42,12 @@ class UCS:
                     for node in self.closed_list:
                         if node.board.board == moveBoard.board:
                             is_node_visited = True
+                            break
 
-                    for node in self.open_list.queue:
-                        if node[1].board.board == moveBoard.board:
-                            is_node_visited = True
+                    if not is_node_visited:
+                        for node in self.open_list.queue:
+                            if node[1].board.board == moveBoard.board:
+                                is_node_visited = True
 
                     if not is_node_visited:
                         newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(moveBoard, self.open_list.queue[0][0]), move)
