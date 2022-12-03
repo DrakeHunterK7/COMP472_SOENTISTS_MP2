@@ -48,7 +48,7 @@ class GBFS:
                             is_node_visited = True
 
                     if not is_node_visited:
-                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(moveBoard, self.open_list.queue[0][0], heuristic), move)
+                        newNode = Node(moveBoard, self.open_list.queue[0][1], self.cost_function(moveBoard, heuristic), move)
                         self.open_list.put([newNode.cost, newNode])
             else:
                 self.solutionFound = True
@@ -69,8 +69,11 @@ class GBFS:
         else:
             print("\n")
             print("No solutions were found!")
+            end_time = time.time()
+            self.runtime = end_time - start_time
+            self.searchPath = self.closed_list
 
-    def cost_function(self, board: bd, cost, heuristic_index):
+    def cost_function(self, board: bd, heuristic_index):
         h = 0
         if heuristic_index == 1:
             h = board.identify_blocking_cars()
@@ -79,7 +82,7 @@ class GBFS:
         elif heuristic_index == 3:
             h = board.identify_blocking_cars() * 4
         elif heuristic_index == 4:
-            h = board.board_dimension - board.get_ambulance_column()
+            h = board.get_ambulance_column()
 
         g = 0
         f = h

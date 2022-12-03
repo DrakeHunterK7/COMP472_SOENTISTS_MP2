@@ -53,9 +53,7 @@ class AStar:
             else:
                 self.solutionFound = True
                 self.trace_path_to_root(self.open_list.queue[0][1])
-                end_time = time.time()
-                self.runtime = end_time-start_time
-                self.searchPath = self.closed_list
+
 
             self.open_list.get()
 
@@ -69,6 +67,9 @@ class AStar:
         else:
             print("\n")
             print("No solutions were found!")
+            end_time = time.time()
+            self.runtime = end_time - start_time
+            self.searchPath = self.closed_list
 
     def cost_function(self, board: bd, cost, heuristic_index):
         h = 0

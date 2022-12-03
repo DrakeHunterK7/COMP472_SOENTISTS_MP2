@@ -5,6 +5,7 @@ class Board:
         # First pass - create an empty 6x6 board with just 0s on it
         self.board_dimension = 6
         self.board = [[0 for x in range(self.board_dimension)] for y in range(self.board_dimension)]
+        self.board_string = ""
         self.cars = []
         count = 0
         self.last_final_fuel = 0
@@ -13,6 +14,7 @@ class Board:
         for i in range(6):
             for j in range(6):
                 self.board[i][j] = string[count]
+                self.board_string += string[count]
                 count = count+1
 
         # Identify all the cars on the board and group them into a list
@@ -149,7 +151,12 @@ class Board:
 
 
 
-
+    def compareBoard(self, board):
+        for i in range(6):
+            for j in range(6):
+                if self.board[i][j] != board.board[i][j]:
+                    return False
+        return True
 
 
     def getAllMoves(self):

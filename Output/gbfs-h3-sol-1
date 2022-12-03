@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------------
+
+Initial Configuration: 
+
+B  B  I  J  .  .  
+.  .  I  J  C  C  
+.  .  I  A  A  M  
+G  D  D  K  .  M  
+G  H  .  K  L  .  
+G  H  F  F  L  .  
+
+
+Car Fuel Available: A:100 B:100 C:100 D:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 M:100 
+
+Runtime: 0.0010497570037841797 seconds
+Search Path Length: 3 states
+Solution Path Length: 2 moves
+Solution Path: M 2 down; A 1 right; 
+
+
+M 2 down            98 BBIJ....IJCC..IAA.GDDK..GH.KLMGHFFLM
+A 1 right           99 BBIJ....IJCC..I.AAGDDK..GH.KLMGHFFLM
+
+
+Final Configuration: 
+
+B  B  I  J  .  .  
+.  .  I  J  C  C  
+.  .  I  .  A  A  
+G  D  D  K  .  .  
+G  H  .  K  L  M  
+G  H  F  F  L  M  
+
+
