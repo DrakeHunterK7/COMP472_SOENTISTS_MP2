@@ -1,5 +1,6 @@
 import Board as bd
 from AStar import AStar
+from GBFS import GBFS
 import pickle
 
 directory = "SampleInputOutput/Sample/"
@@ -22,7 +23,7 @@ for index, board in enumerate(boards):
     solution_file = open(output_directory+"a-h" + str(h+1) + "-sol-" + str(index+1), 'w')
     search_file = open(output_directory + "a-h" + str(h+1) + "-search-" + str(index+1), 'w')
 
-    astar_solver = AStar(board)
+    astar_solver = GBFS(board)
     astar_solver.search_solution(h + 1)
 
     if astar_solver.solutionFound:
