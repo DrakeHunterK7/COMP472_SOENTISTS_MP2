@@ -12,22 +12,24 @@ G  H  F  F  L  .
 
 Car Fuel Available: A:100 B:100 C:100 D:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 M:100 
 
-Runtime: 0.0010004043579101562 seconds
-Search Path Length: 2 states
-Solution Path Length: 1 moves
-Solution Path: M 2 down; 
+Runtime: 0.004000425338745117 seconds
+Search Path Length: 8 states
+Solution Path Length: 3 moves
+Solution Path: M 1 down; G 2 up; A 1 right; 
 
 
-M 2 down            98 BBIJ....IJCC..IAA.GDDK..GH.KLMGHFFLM
+M 1 down            99 BBIJ....IJCC..IAA.GDDK.MGH.KLMGHFFL.
+G 2 up              98 BBIJ..G.IJCCG.IAA.GDDK.M.H.KLM.HFFL.
+A 1 right           99 BBIJ..G.IJCCG.I.AAGDDK.M.H.KLM.HFFL.
 
 
 Final Configuration: 
 
 B  B  I  J  .  .  
-.  .  I  J  C  C  
-.  .  I  A  A  .  
-G  D  D  K  .  .  
-G  H  .  K  L  M  
-G  H  F  F  L  M  
+G  .  I  J  C  C  
+G  .  I  .  A  A  
+G  D  D  K  .  M  
+.  H  .  K  L  M  
+.  H  F  F  L  .  
 
 

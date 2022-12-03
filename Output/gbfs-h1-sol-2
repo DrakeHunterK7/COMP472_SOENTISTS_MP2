@@ -12,10 +12,10 @@ F  F  .  J  .  .
 
 Car Fuel Available: A:100 B:100 D:100 E:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 
 
-Runtime: 0.10700011253356934 seconds
-Search Path Length: 82 states
+Runtime: 0.11499881744384766 seconds
+Search Path Length: 85 states
 Solution Path Length: 12 moves
-Solution Path: L 2 up; F 1 right; H 1 down; A 1 left; K 1 up; D 2 right; J 4 up; G 1 down; D 2 left; E 2 left; K 3 down; A 1 right; 
+Solution Path: L 2 up; F 1 right; H 1 down; A 1 left; K 1 up; D 2 right; J 4 up; G 1 down; D 2 left; E 2 left; K 3 down; A 3 right; 
 
 
 L 2 up              98 ..I..LBBI.KLGHAAK.GHDDK.G..JEEFF.J..
@@ -29,14 +29,14 @@ G 1 down            99 ..IJKLBBIJKL.AA.K.GH..DDGH..EEGFF...
 D 2 left            96 ..IJKLBBIJKL.AA.K.GHDD..GH..EEGFF...
 E 2 left            98 ..IJKLBBIJKL.AA.K.GHDD..GHEE..GFF...
 K 3 down            96 ..IJ.LBBIJ.L.AA...GHDDK.GHEEK.GFF.K.
-A 1 right           98 ..IJ.LBBIJ.L..AA..GHDDK.GHEEK.GFF.K.
+A 3 right           96 ..IJ.LBBIJ.L....AAGHDDK.GHEEK.GFF.K.
 
 
 Final Configuration: 
 
 .  .  I  J  .  L  
 B  B  I  J  .  L  
-.  .  A  A  .  .  
+.  .  .  .  A  A  
 G  H  D  D  K  .  
 G  H  E  E  K  .  
 G  F  F  .  K  .  
