@@ -12,7 +12,7 @@ F  F  K  L  .  N
 
 Car Fuel Available: A:100 B:100 C:100 D:100 F:100 G:100 H:100 J:100 K:100 L:100 M:100 N:100 
 
-Runtime: 66.43085074424744 seconds
+Runtime: 102.27024006843567 seconds
 Search Path Length: 4377 states
 Solution Path Length: 17 moves
 Solution Path: H 2 right; K 1 down; L 1 up; N 1 down; F 4 right; J 3 down; B 1 left; A 1 left; D 1 left; K 4 up; G 2 left; L 2 down; A 3 right; K 2 down; C 1 left; M 1 up; A 1 right; 

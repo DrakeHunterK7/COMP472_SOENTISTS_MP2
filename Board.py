@@ -92,15 +92,15 @@ class Board:
         ambulance = self.cars[0]
         ambulance_last_cell = ambulance.cell_list[len(ambulance.cell_list)-1]
 
-        characters_list = []
+        cars_count = 0
+        cars_done = []
 
         for x in range(ambulance_last_cell[1]+1, self.board_dimension):
-            if self.board[ambulance_last_cell[0]][x] != ".":
-                characters_list.append(self.board[ambulance_last_cell[0]][x])
+            if self.board[ambulance_last_cell[0]][x] != "." and self.board[ambulance_last_cell[0]][x] not in cars_done:
+                cars_count = cars_count + 1
+                cars_done.append(self.board[ambulance_last_cell[0]][x])
 
-        characters_list = list(dict.fromkeys(characters_list))
-
-        return len(characters_list)
+        return cars_count
 
     def identify_blocking_positions(self):
         ambulance = self.cars[0]
@@ -118,28 +118,27 @@ class Board:
         cost = 0
         ambulance = self.cars[0]
         ambulance_last_cell = ambulance.cell_list[len(ambulance.cell_list) - 1]
+        cars_done = []
 
         for x in range(ambulance_last_cell[1]+1, self.board_dimension):
             blocking_car = ""
-            if self.board[ambulance_last_cell[0]][x] != ".":
-                if self.board[ambulance_last_cell[0]][x] != blocking_car:
-                    cost = cost + 1
-                    blocking_car = x
-
+            if self.board[ambulance_last_cell[0]][x] != "." \
+                    and cars_done.count(self.board[ambulance_last_cell[0]][x]) == 0:
+                cost = cost + 1
+                cars_done.append(x)
                 cost_one = 0
-                blocking_car_one = ""
 
                 for y in range(ambulance_last_cell[0], -1, -1):
-                    if self.board[x][y] != "." and self.board[x][y] != blocking_car_one:
-                        blocking_car_one = y
-                        const_one = cost_one + 1
+                    if self.board[x][y] != "." and cars_done.count(self.board[x][y]) == 0:
+                        cost_one = cost_one + 1
+                        cars_done.append(self.board[x][y])
 
                 cost_two = 0
-                blocking_car_two = ""
+
                 for y in range(ambulance_last_cell[0], self.board_dimension):
-                    if self.board[x][y] !=  "." and self.board[x][y] != blocking_car_two:
-                        blocking_car_two = y
-                        const_two = cost_two + 1
+                    if self.board[x][y] != "." and cars_done.count(self.board[x][y]):
+                        cars_done.append(self.board[x][y])
+                        cost_two = cost_two + 1
 
                 if cost_one < cost_two:
                     cost = cost + cost_one
