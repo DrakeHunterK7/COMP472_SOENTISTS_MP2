@@ -14,7 +14,7 @@ from openpyxl import Workbook
 directory = "SampleInputOutput/Sample/"
 output_directory = "Output/"
 
-file = open(directory + "sample-input.txt", 'r')
+file = open(directory + "puzzle-input.txt", 'r')
 
 boards = []
 
