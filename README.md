@@ -12,6 +12,9 @@ Instructions on running the program:
 6) Once the program has finished, you will see approximately 450 output files in the Output folder in the root directory. You will also see an excel file generated in the root directory called "50_solutions_results" which is a spreadsheet containing all the data about the algorithms performance with the 50 puzzles. 
 
 Team Members:
+
 Anas Peerzada - 40040127
+
 Amir Sadeghi - 40074697
+
 Shahd Yousef - 40114343
