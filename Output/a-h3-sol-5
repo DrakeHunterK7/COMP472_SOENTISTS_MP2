@@ -2,18 +2,36 @@
 
 Initial Configuration: 
 
-I  J  B  B  C  C  
-I  J  D  D  L  .  
-I  J  A  A  L  .  
-E  E  K  .  L  .  
-.  .  K  F  F  .  
-.  G  G  H  H  .  
+.  O  O  O  .  .  
+.  .  P  Q  Q  Q  
+.  .  P  A  A  T  
+.  .  P  .  .  T  
+B  R  R  R  C  C  
+B  .  .  .  .  .  
 
 
-Car Fuel Available: A:100 B:100 C:100 D:100 E:100 F:0 G:6 H:100 I:100 J:100 K:100 L:100 
+Car Fuel Available: A:100 B:100 C:100 O:100 P:100 Q:100 R:100 T:100 
 
-Runtime: 0.2927815914154053 seconds
-Search Path Length: 353 states
-Solution Path Length: 0 moves
-Solution Path:  No solutions! 
+Runtime: 0.021028518676757812 seconds
+Search Path Length: 48 states
+Solution Path Length: 5 moves
+Solution Path: B 2 up; R 1 left; C 1 left; T 1 down; A 1 right; 
+
+
+B 2 up              98 .OOO....PQQQB.PAATB.P..T.RRRCC......
+R 1 left            99 .OOO....PQQQB.PAATB.P..TRRR.CC......
+C 1 left            99 .OOO....PQQQB.PAATB.P..TRRRCC.......
+T 1 down            99 .OOO....PQQQB.PAA.B.P..TRRRCCT......
+A 1 right           99 .OOO....PQQQB.P.AAB.P..TRRRCCT......
+
+
+Final Configuration: 
+
+.  O  O  O  .  .  
+.  .  P  Q  Q  Q  
+B  .  P  .  A  A  
+B  .  P  .  .  T  
+R  R  R  C  C  T  
+.  .  .  .  .  .  
+
 

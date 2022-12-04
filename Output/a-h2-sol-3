@@ -2,48 +2,40 @@
 
 Initial Configuration: 
 
-J  B  B  C  C  C  
-J  D  D  .  .  M  
-J  A  A  L  .  M  
-F  F  K  L  .  N  
-.  .  K  G  G  N  
-.  H  H  .  .  .  
+.  .  .  T  .  B  
+.  .  .  T  .  B  
+.  .  C  A  A  D  
+.  .  C  .  .  D  
+.  .  E  F  G  G  
+.  .  E  F  .  .  
 
 
-Car Fuel Available: A:100 B:100 C:100 D:100 F:100 G:100 H:100 J:100 K:100 L:100 M:100 N:100 
+Car Fuel Available: A:100 B:100 C:100 D:100 E:100 F:100 G:100 T:100 
 
-Runtime: 60.776015758514404 seconds
-Search Path Length: 4245 states
-Solution Path Length: 17 moves
-Solution Path: L 1 up; H 3 right; K 1 down; F 3 right; J 3 down; D 1 left; A 1 left; B 1 left; K 4 up; G 2 left; F 2 left; L 2 down; A 3 right; K 1 down; C 1 left; M 1 up; A 1 right; 
+Runtime: 0.12799882888793945 seconds
+Search Path Length: 178 states
+Solution Path Length: 9 moves
+Solution Path: C 2 up; A 3 left; E 2 up; F 2 up; G 4 left; F 1 down; E 1 down; D 2 down; A 4 right; 
 
 
-L 1 up              99 JBBCCCJDDL.MJAAL.MFFK..N..KGGN.HH...
-H 3 right           97 JBBCCCJDDL.MJAAL.MFFK..N..KGGN....HH
-K 1 down            99 JBBCCCJDDL.MJAAL.MFF...N..KGGN..K.HH
-F 3 right           97 JBBCCCJDDL.MJAAL.M...FFN..KGGN..K.HH
-J 3 down            97 .BBCCC.DDL.M.AAL.MJ..FFNJ.KGGNJ.K.HH
-D 1 left            99 .BBCCCDD.L.M.AAL.MJ..FFNJ.KGGNJ.K.HH
-A 1 left            99 .BBCCCDD.L.MAA.L.MJ..FFNJ.KGGNJ.K.HH
-B 1 left            99 BB.CCCDD.L.MAA.L.MJ..FFNJ.KGGNJ.K.HH
-K 4 up              95 BBKCCCDDKL.MAA.L.MJ..FFNJ..GGNJ...HH
-G 2 left            98 BBKCCCDDKL.MAA.L.MJ..FFNJGG..NJ...HH
-F 2 left            95 BBKCCCDDKL.MAA.L.MJFF..NJGG..NJ...HH
-L 2 down            97 BBKCCCDDK..MAA...MJFFL.NJGGL.NJ...HH
-A 3 right           96 BBKCCCDDK..M...AAMJFFL.NJGGL.NJ...HH
-K 1 down            94 BB.CCCDDK..M..KAAMJFFL.NJGGL.NJ...HH
-C 1 left            99 BBCCC.DDK..M..KAAMJFFL.NJGGL.NJ...HH
-M 1 up              99 BBCCCMDDK..M..KAA.JFFL.NJGGL.NJ...HH
-A 1 right           95 BBCCCMDDK..M..K.AAJFFL.NJGGL.NJ...HH
+C 2 up              98 ..CT.B..CT.B...AAD.....D..EFGG..EF..
+A 3 left            97 ..CT.B..CT.BAA...D.....D..EFGG..EF..
+E 2 up              98 ..CT.B..CT.BAAE..D..E..D...FGG...F..
+F 2 up              98 ..CT.B..CT.BAAEF.D..EF.D....GG......
+G 4 left            96 ..CT.B..CT.BAAEF.D..EF.DGG..........
+F 1 down            97 ..CT.B..CT.BAAE..D..EF.DGG.F........
+E 1 down            97 ..CT.B..CT.BAA...D..EF.DGGEF........
+D 2 down            98 ..CT.B..CT.BAA......EF..GGEF.D.....D
+A 4 right           93 ..CT.B..CT.B....AA..EF..GGEF.D.....D
 
 
 Final Configuration: 
 
-B  B  C  C  C  M  
-D  D  K  .  .  M  
-.  .  K  .  A  A  
-J  F  F  L  .  N  
-J  G  G  L  .  N  
-J  .  .  .  H  H  
+.  .  C  T  .  B  
+.  .  C  T  .  B  
+.  .  .  .  A  A  
+.  .  E  F  .  .  
+G  G  E  F  .  D  
+.  .  .  .  .  D  
 
 

@@ -2,33 +2,40 @@
 
 Initial Configuration: 
 
-B  B  I  J  .  .  
-.  .  I  J  C  C  
-.  .  I  A  A  M  
-G  D  D  K  .  M  
-G  H  .  K  L  .  
-G  H  F  F  L  .  
+.  T  .  .  B  O  
+.  T  .  .  B  O  
+A  A  .  .  C  O  
+.  D  .  .  C  .  
+.  D  P  P  P  .  
+.  .  .  Q  Q  Q  
 
 
-Car Fuel Available: A:100 B:100 C:100 D:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 M:100 
+Car Fuel Available: A:100 B:100 C:100 D:100 O:100 P:100 Q:100 T:100 
 
-Runtime: 0.0019965171813964844 seconds
-Search Path Length: 5 states
-Solution Path Length: 2 moves
-Solution Path: M 2 down; A 1 right; 
+Runtime: 0.023995399475097656 seconds
+Search Path Length: 37 states
+Solution Path Length: 9 moves
+Solution Path: D 1 down; A 2 right; D 2 up; Q 3 left; P 2 left; C 2 down; Q 1 right; O 3 down; A 2 right; 
 
 
-M 2 down            98 BBIJ....IJCC..IAA.GDDK..GH.KLMGHFFLM
-A 1 right           99 BBIJ....IJCC..I.AAGDDK..GH.KLMGHFFLM
+D 1 down            99 .T..BO.T..BOAA..CO....C..DPPP..D.QQQ
+A 2 right           98 .T..BO.T..BO..AACO....C..DPPP..D.QQQ
+D 2 up              97 .T..BO.T..BO.DAACO.D..C...PPP....QQQ
+Q 3 left            97 .T..BO.T..BO.DAACO.D..C...PPP.QQQ...
+P 2 left            98 .T..BO.T..BO.DAACO.D..C.PPP...QQQ...
+C 2 down            98 .T..BO.T..BO.DAA.O.D....PPP.C.QQQ.C.
+Q 1 right           96 .T..BO.T..BO.DAA.O.D....PPP.C..QQQC.
+O 3 down            97 .T..B..T..B..DAA...D...OPPP.CO.QQQCO
+A 2 right           96 .T..B..T..B..D..AA.D...OPPP.CO.QQQCO
 
 
 Final Configuration: 
 
-B  B  I  J  .  .  
-.  .  I  J  C  C  
-.  .  I  .  A  A  
-G  D  D  K  .  .  
-G  H  .  K  L  M  
-G  H  F  F  L  M  
+.  T  .  .  B  .  
+.  T  .  .  B  .  
+.  D  .  .  A  A  
+.  D  .  .  .  O  
+P  P  P  .  C  O  
+.  Q  Q  Q  C  O  
 
 

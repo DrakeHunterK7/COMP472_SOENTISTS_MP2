@@ -2,43 +2,40 @@
 
 Initial Configuration: 
 
-.  .  I  .  .  .  
-B  B  I  .  K  .  
-G  H  A  A  K  L  
-G  H  D  D  K  L  
-G  .  .  J  E  E  
-F  F  .  J  .  .  
+T  .  .  O  O  O  
+T  .  .  B  .  .  
+A  A  .  B  C  D  
+.  .  .  P  C  D  
+.  .  .  P  E  .  
+.  .  .  P  E  .  
 
 
-Car Fuel Available: A:100 B:100 D:100 E:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 
+Car Fuel Available: A:100 B:100 C:100 D:100 E:100 O:100 P:100 T:100 
 
-Runtime: 0.2435760498046875 seconds
-Search Path Length: 85 states
-Solution Path Length: 12 moves
-Solution Path: L 2 up; F 1 right; H 1 down; A 1 left; K 1 up; D 2 right; J 4 up; G 1 down; D 2 left; E 2 left; K 3 down; A 3 right; 
+Runtime: 0.0149993896484375 seconds
+Search Path Length: 21 states
+Solution Path Length: 9 moves
+Solution Path: C 1 up; D 2 down; O 2 left; C 1 up; A 1 right; T 1 down; O 1 left; B 1 up; A 3 right; 
 
 
-L 2 up              98 ..I..LBBI.KLGHAAK.GHDDK.G..JEEFF.J..
-F 1 right           99 ..I..LBBI.KLGHAAK.GHDDK.G..JEE.FFJ..
-H 1 down            99 ..I..LBBI.KLG.AAK.GHDDK.GH.JEE.FFJ..
-A 1 left            99 ..I..LBBI.KLGAA.K.GHDDK.GH.JEE.FFJ..
-K 1 up              99 ..I.KLBBI.KLGAA.K.GHDD..GH.JEE.FFJ..
-D 2 right           98 ..I.KLBBI.KLGAA.K.GH..DDGH.JEE.FFJ..
-J 4 up              96 ..IJKLBBIJKLGAA.K.GH..DDGH..EE.FF...
-G 1 down            99 ..IJKLBBIJKL.AA.K.GH..DDGH..EEGFF...
-D 2 left            96 ..IJKLBBIJKL.AA.K.GHDD..GH..EEGFF...
-E 2 left            98 ..IJKLBBIJKL.AA.K.GHDD..GHEE..GFF...
-K 3 down            96 ..IJ.LBBIJ.L.AA...GHDDK.GHEEK.GFF.K.
-A 3 right           96 ..IJ.LBBIJ.L....AAGHDDK.GHEEK.GFF.K.
+C 1 up              99 T..OOOT..BC.AA.BCD...P.D...PE....PE.
+D 2 down            98 T..OOOT..BC.AA.BC....P.....PED...PED
+O 2 left            98 TOOO..T..BC.AA.BC....P.....PED...PED
+C 1 up              98 TOOOC.T..BC.AA.B.....P.....PED...PED
+A 1 right           99 TOOOC.T..BC..AAB.....P.....PED...PED
+T 1 down            99 .OOOC.T..BC.TAAB.....P.....PED...PED
+O 1 left            97 OOO.C.T..BC.TAAB.....P.....PED...PED
+B 1 up              99 OOOBC.T..BC.TAA......P.....PED...PED
+A 3 right           96 OOOBC.T..BC.T...AA...P.....PED...PED
 
 
 Final Configuration: 
 
-.  .  I  J  .  L  
-B  B  I  J  .  L  
-.  .  .  .  A  A  
-G  H  D  D  K  .  
-G  H  E  E  K  .  
-G  F  F  .  K  .  
+O  O  O  B  C  .  
+T  .  .  B  C  .  
+T  .  .  .  A  A  
+.  .  .  P  .  .  
+.  .  .  P  E  D  
+.  .  .  P  E  D  
 
 

@@ -1,12 +1,8 @@
-import AStar
 import Board as bd
-import Node
 from AStar import AStar
 from GBFS import GBFS
 from UCS import UCS
 import time
-import sys
-import collections
 from openpyxl import Workbook
 
 
@@ -36,7 +32,7 @@ sheet['E1'] = "Search Path Length"
 sheet['F1'] = "Run Time"
 
 for index, board in enumerate(boards):
-    sheet.cell(row=index*9+1+1, column=1).value = index*9+1
+    sheet.cell(row=index*9+1+1, column=1).value = index+1
     sheet.cell(row=index*9+1+1, column=2).value = "UCS"
     sheet.cell(row=index*9+1+1, column=3).value = "N/A"
     solution_file = open(output_directory + "ucs" + "-sol-" + str(index + 1), 'w')
@@ -83,7 +79,7 @@ for index, board in enumerate(boards):
     search_file.close()
 
     for h in range(4):
-        sheet.cell(row=index*9 + 1 + 2 + h, column=1).value = index*9 + 1 + h + 1
+        sheet.cell(row=index*9 + 1 + 2 + h, column=1).value = index+1
         sheet.cell(row=index*9 + 1 + 2 + h, column=2).value = "A*"
         sheet.cell(row=index*9 + 1 + 2 + h, column=3).value = h+1
         solution_file = open(output_directory+"a-h" + str(h+1) + "-sol-" + str(index+1), 'w')
@@ -130,7 +126,7 @@ for index, board in enumerate(boards):
         search_file.close()
 
     for h in range(4):
-        sheet.cell(row=index*9 + 1 + 2 + 4 + h, column=1).value = index*9 + 5 + h + 1
+        sheet.cell(row=index*9 + 1 + 2 + 4 + h, column=1).value = index+1
         sheet.cell(row=index*9 + 1 + 2 + 4 + h, column=2).value = "GBFS"
         sheet.cell(row=index*9 + 1 + 2 + 4 + h, column=3).value = h + 1
 

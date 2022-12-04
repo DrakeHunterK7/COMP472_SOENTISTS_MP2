@@ -2,41 +2,38 @@
 
 Initial Configuration: 
 
-.  .  I  .  .  .  
-B  B  I  .  K  .  
-G  H  A  A  K  L  
-G  H  D  D  K  L  
-G  .  .  J  E  E  
-F  F  .  J  .  .  
+T  .  .  O  O  O  
+T  .  .  B  .  .  
+A  A  .  B  C  D  
+.  .  .  P  C  D  
+.  .  .  P  E  .  
+.  .  .  P  E  .  
 
 
-Car Fuel Available: A:100 B:100 D:100 E:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 
+Car Fuel Available: A:100 B:100 C:100 D:100 E:100 O:100 P:100 T:100 
 
-Runtime: 0.5880374908447266 seconds
-Search Path Length: 368 states
-Solution Path Length: 10 moves
-Solution Path: L 2 up; H 1 down; A 1 left; K 1 up; D 2 right; J 4 up; E 2 left; D 2 left; K 3 down; A 3 right; 
+Runtime: 0.6589710712432861 seconds
+Search Path Length: 397 states
+Solution Path Length: 7 moves
+Solution Path: D 1 down; A 1 right; T 1 down; O 3 left; C 2 up; B 1 up; A 3 right; 
 
 
-L 2 up              98 ..I..LBBI.KLGHAAK.GHDDK.G..JEEFF.J..
-H 1 down            99 ..I..LBBI.KLG.AAK.GHDDK.GH.JEEFF.J..
-A 1 left            99 ..I..LBBI.KLGAA.K.GHDDK.GH.JEEFF.J..
-K 1 up              99 ..I.KLBBI.KLGAA.K.GHDD..GH.JEEFF.J..
-D 2 right           98 ..I.KLBBI.KLGAA.K.GH..DDGH.JEEFF.J..
-J 4 up              96 ..IJKLBBIJKLGAA.K.GH..DDGH..EEFF....
-E 2 left            98 ..IJKLBBIJKLGAA.K.GH..DDGHEE..FF....
-D 2 left            96 ..IJKLBBIJKLGAA.K.GHDD..GHEE..FF....
-K 3 down            96 ..IJ.LBBIJ.LGAA...GHDDK.GHEEK.FF..K.
-A 3 right           96 ..IJ.LBBIJ.LG...AAGHDDK.GHEEK.FF..K.
+D 1 down            99 T..OOOT..B..AA.BC....PCD...PED...PE.
+A 1 right           99 T..OOOT..B...AABC....PCD...PED...PE.
+T 1 down            99 ...OOOT..B..TAABC....PCD...PED...PE.
+O 3 left            97 OOO...T..B..TAABC....PCD...PED...PE.
+C 2 up              98 OOO.C.T..BC.TAAB.....P.D...PED...PE.
+B 1 up              99 OOOBC.T..BC.TAA......P.D...PED...PE.
+A 3 right           96 OOOBC.T..BC.T...AA...P.D...PED...PE.
 
 
 Final Configuration: 
 
-.  .  I  J  .  L  
-B  B  I  J  .  L  
-G  .  .  .  A  A  
-G  H  D  D  K  .  
-G  H  E  E  K  .  
-F  F  .  .  K  .  
+O  O  O  B  C  .  
+T  .  .  B  C  .  
+T  .  .  .  A  A  
+.  .  .  P  .  D  
+.  .  .  P  E  D  
+.  .  .  P  E  .  
 
 

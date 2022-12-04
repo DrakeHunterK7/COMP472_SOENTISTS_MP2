@@ -1,0 +1,45 @@
+--------------------------------------------------------------------------------
+
+Initial Configuration: 
+
+.  .  .  O  O  O  
+.  .  .  .  P  T  
+A  A  .  .  P  T  
+.  Q  .  .  P  B  
+.  Q  R  R  R  B  
+.  Q  .  C  C  .  
+
+
+Car Fuel Available: A:100 B:100 C:100 O:100 P:100 Q:100 R:100 T:100 
+
+Runtime: 0.062001705169677734 seconds
+Search Path Length: 63 states
+Solution Path Length: 13 moves
+Solution Path: B 1 down; O 1 left; A 2 right; T 1 down; Q 3 up; T 2 up; C 1 left; T 1 down; R 2 left; P 2 down; C 1 left; T 1 up; A 2 right; 
+
+
+B 1 down            99 ...OOO....PTAA..PT.Q..P..QRRRB.Q.CCB
+O 1 left            99 ..OOO.....PTAA..PT.Q..P..QRRRB.Q.CCB
+A 2 right           98 ..OOO.....PT..AAPT.Q..P..QRRRB.Q.CCB
+T 1 down            99 ..OOO.....P...AAPT.Q..PT.QRRRB.Q.CCB
+Q 3 up              97 .QOOO..Q..P..QAAPT....PT..RRRB...CCB
+T 2 up              97 .QOOOT.Q..PT.QAAP.....P...RRRB...CCB
+C 1 left            99 .QOOOT.Q..PT.QAAP.....P...RRRB..CC.B
+T 1 down            96 .QOOO..Q..PT.QAAPT....P...RRRB..CC.B
+R 2 left            98 .QOOO..Q..PT.QAAPT....P.RRR..B..CC.B
+P 2 down            98 .QOOO..Q...T.QAA.T....P.RRR.PB..CCPB
+C 1 left            98 .QOOO..Q...T.QAA.T....P.RRR.PB.CC.PB
+T 1 up              95 .QOOOT.Q...T.QAA......P.RRR.PB.CC.PB
+A 2 right           96 .QOOOT.Q...T.Q..AA....P.RRR.PB.CC.PB
+
+
+Final Configuration: 
+
+.  Q  O  O  O  T  
+.  Q  .  .  .  T  
+.  Q  .  .  A  A  
+.  .  .  .  P  .  
+R  R  R  .  P  B  
+.  C  C  .  P  B  
+
+

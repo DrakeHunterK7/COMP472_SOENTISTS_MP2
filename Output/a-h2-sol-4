@@ -2,18 +2,40 @@
 
 Initial Configuration: 
 
-B  B  B  .  .  M  
-C  C  D  D  .  M  
-A  A  K  L  .  M  
-J  .  K  L  E  E  
-J  .  G  G  .  .  
-J  H  H  H  I  I  
+.  .  O  P  P  P  
+.  .  O  .  T  .  
+A  A  O  .  T  B  
+.  .  .  .  .  B  
+.  .  .  C  .  D  
+Q  Q  Q  C  .  D  
 
 
-Car Fuel Available: A:100 B:4 C:100 D:100 E:100 G:100 H:100 I:100 J:0 K:100 L:100 M:100 
+Car Fuel Available: A:100 B:100 C:100 D:100 O:100 P:100 Q:100 T:100 
 
-Runtime: 0.08900189399719238 seconds
-Search Path Length: 156 states
-Solution Path Length: 0 moves
-Solution Path:  No solutions! 
+Runtime: 7.963034629821777 seconds
+Search Path Length: 1513 states
+Solution Path Length: 9 moves
+Solution Path: T 2 down; B 1 up; D 1 up; C 1 up; Q 3 right; O 3 down; P 2 left; B 1 up; A 4 right; 
+
+
+T 2 down            98 ..OPPP..O...AAO..B....TB...CTDQQQC.D
+B 1 up              99 ..OPPP..O..BAAO..B....T....CTDQQQC.D
+D 1 up              99 ..OPPP..O..BAAO..B....TD...CTDQQQC..
+C 1 up              99 ..OPPP..O..BAAO..B...CTD...CTDQQQ...
+Q 3 right           97 ..OPPP..O..BAAO..B...CTD...CTD...QQQ
+O 3 down            97 ...PPP.....BAA...B..OCTD..OCTD..OQQQ
+P 2 left            98 .PPP.......BAA...B..OCTD..OCTD..OQQQ
+B 1 up              98 .PPP.B.....BAA......OCTD..OCTD..OQQQ
+A 4 right           96 .PPP.B.....B....AA..OCTD..OCTD..OQQQ
+
+
+Final Configuration: 
+
+.  P  P  P  .  B  
+.  .  .  .  .  B  
+.  .  .  .  A  A  
+.  .  O  C  T  D  
+.  .  O  C  T  D  
+.  .  O  Q  Q  Q  
+
 

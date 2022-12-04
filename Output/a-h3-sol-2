@@ -2,41 +2,39 @@
 
 Initial Configuration: 
 
-.  .  I  .  .  .  
-B  B  I  .  K  .  
-G  H  A  A  K  L  
-G  H  D  D  K  L  
-G  .  .  J  E  E  
-F  F  .  J  .  .  
+T  .  .  O  O  O  
+T  .  .  B  .  .  
+A  A  .  B  C  D  
+.  .  .  P  C  D  
+.  .  .  P  E  .  
+.  .  .  P  E  .  
 
 
-Car Fuel Available: A:100 B:100 D:100 E:100 F:100 G:100 H:100 I:100 J:100 K:100 L:100 
+Car Fuel Available: A:100 B:100 C:100 D:100 E:100 O:100 P:100 T:100 
 
-Runtime: 0.3559553623199463 seconds
-Search Path Length: 248 states
-Solution Path Length: 10 moves
-Solution Path: L 2 up; H 1 down; K 1 up; D 2 right; A 1 left; J 4 up; E 2 left; D 2 left; K 3 down; A 3 right; 
+Runtime: 0.2419888973236084 seconds
+Search Path Length: 203 states
+Solution Path Length: 8 moves
+Solution Path: D 1 down; O 2 left; C 2 up; A 1 right; T 4 down; O 1 left; B 1 up; A 3 right; 
 
 
-L 2 up              98 ..I..LBBI.KLGHAAK.GHDDK.G..JEEFF.J..
-H 1 down            99 ..I..LBBI.KLG.AAK.GHDDK.GH.JEEFF.J..
-K 1 up              99 ..I.KLBBI.KLG.AAK.GHDD..GH.JEEFF.J..
-D 2 right           98 ..I.KLBBI.KLG.AAK.GH..DDGH.JEEFF.J..
-A 1 left            99 ..I.KLBBI.KLGAA.K.GH..DDGH.JEEFF.J..
-J 4 up              96 ..IJKLBBIJKLGAA.K.GH..DDGH..EEFF....
-E 2 left            98 ..IJKLBBIJKLGAA.K.GH..DDGHEE..FF....
-D 2 left            96 ..IJKLBBIJKLGAA.K.GHDD..GHEE..FF....
-K 3 down            96 ..IJ.LBBIJ.LGAA...GHDDK.GHEEK.FF..K.
-A 3 right           96 ..IJ.LBBIJ.LG...AAGHDDK.GHEEK.FF..K.
+D 1 down            99 T..OOOT..B..AA.BC....PCD...PED...PE.
+O 2 left            98 TOOO..T..B..AA.BC....PCD...PED...PE.
+C 2 up              98 TOOOC.T..BC.AA.B.....P.D...PED...PE.
+A 1 right           99 TOOOC.T..BC..AAB.....P.D...PED...PE.
+T 4 down            96 .OOOC....BC..AAB.....P.DT..PEDT..PE.
+O 1 left            97 OOO.C....BC..AAB.....P.DT..PEDT..PE.
+B 1 up              99 OOOBC....BC..AA......P.DT..PEDT..PE.
+A 3 right           96 OOOBC....BC.....AA...P.DT..PEDT..PE.
 
 
 Final Configuration: 
 
-.  .  I  J  .  L  
-B  B  I  J  .  L  
-G  .  .  .  A  A  
-G  H  D  D  K  .  
-G  H  E  E  K  .  
-F  F  .  .  K  .  
+O  O  O  B  C  .  
+.  .  .  B  C  .  
+.  .  .  .  A  A  
+.  .  .  P  .  D  
+T  .  .  P  E  D  
+T  .  .  P  E  .  
 
 
